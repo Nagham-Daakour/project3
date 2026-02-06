@@ -5,301 +5,98 @@
 }
 
 
-
-html,
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
 }
 
-body {
-    background-color: var(--secondary-color);
-    font-family: "Jost", sans-serif;
+.eclipse-logo {
+    color: #0d6efd;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
 }
 
-.nav-link:focus {
-    outline: 1px solid var(--primary-color);
-    border-radius: 5px;
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.modal-header {
-    border-bottom: none;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.modal-footer {
-    border-top: none;
+.form-control {
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
 }
 
 .form-control:focus {
-    border-color: transparent;
-    box-shadow: 0px 0px 3px 2px rgb(163, 163, 163);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    border-color: #86b7fe;
 }
 
-.social-icons {
-    z-index: 9999;
-    right: 0;
-    margin-right: 0.65rem;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    width: 40px;
-    overflow: hidden;
+.input-group-text {
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
 }
 
-.social-icons a i {
-    transition: opacity 0.2s ease;
-    opacity: 1;
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
 }
 
-.social-icons a:hover i {
-    opacity: 0.4 !important;
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-2px);
 }
 
-.accordion-button::after,
-.accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='gray' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+.btn-outline-secondary {
+    border-radius: 0 0.5rem 0.5rem 0;
 }
 
-.special-card {
-    position: relative;
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
 
-.special-card::before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 193, 7, 0.1);
-    opacity: 0;
-    transition: all 0.8s ease;
-    z-index: 1;
+a {
+    transition: all 0.3s ease;
 }
 
-.special-card:hover::before {
-    height: 100%;
-    width: 100%;
-    opacity: 1;
+a:hover {
+    text-decoration: underline !important;
 }
 
-.special-card::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    left: 0;
-    top: 0;
-    background: rgba(255, 193, 7, 0.1);
-    opacity: 0;
-    transition: all 0.8s ease;
-    z-index: 1;
-}
-
-.special-card:hover::after {
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-}
-
-.clip-slant {
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
-    transition: transform 0.4s ease-in-out;
-}
-
-.clip-rect {
-    overflow: hidden;
-    position: relative;
-    height: 330px;
-}
-
-.clip-slant2 {
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-    transition: transform 0.4s ease-in-out;
-}
-
-.special-image {
-    width: 100%;
-    height: 100%;
-    min-height: 250px;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-.special-image1 {
-    background-image: url(../images/a.avif);
-}
-
-.special-image2 {
-    background-image: url(../images/b.avif);
-}
-
-.special-image3 {
-    background-image: url(../images/c.avif);
-}
-
-.special-image4 {
-    background-image: url(../images/d.avif);
-}
-
-.card:hover .special-image {
-    transform: scale(1.05);
-}
-
-.special-btn:hover {
-    background-color: rgb(165, 165, 165);
+.alert {
+    border-radius: 0.75rem;
     border: none;
 }
 
-.custom-card {
-    transition: transform 0.7s ease;
-    cursor: pointer;
+.form-text {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
 }
 
-.custom-card:hover {
-    transform: scale(0.9);
-}
-.wider-container {
-    max-width: 1200px;
-}
-.special-card2{
-    transition: 0.5s;
-}
-.special-card2:hover{
-    cursor: pointer;
-    transform: scale(1.03);
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .eclipse-logo {
+        font-size: 2rem;
+    }
 }
 
-/* Custom Blue & Gold Color Theme */
-        :root {
-            --primary-blue: #2c3e50;
-            --secondary-blue: #34495e;
-            --accent-gold: #d4af37;
-            --light-gold: #f4e4b6;
-            --light-gray: #f8f9fa;
-            --dark-gray: #343a40;
-        }
-        
-        .btn-gold {
-            background-color: var(--accent-gold);
-            border-color: var(--accent-gold);
-            color: var(--primary-blue);
-            font-weight: bold;
-        }
-        .btn-gold:hover {
-            background-color: #c19b2e;
-            border-color: #c19b2e;
-            color: var(--primary-blue);
-        }
-        .btn-outline-gold {
-            color: var(--accent-gold);
-            border-color: var(--accent-gold);
-        }
-        .btn-outline-gold:hover {
-            background-color: var(--accent-gold);
-            border-color: var(--accent-gold);
-            color: var(--primary-blue);
-        }
-        .text-gold {
-            color: var(--accent-gold) !important;
-        }
-        .border-gold {
-            border-color: var(--accent-gold) !important;
-        }
-        .bg-blue {
-            background-color: var(--primary-blue) !important;
-        }
-        .bg-light-blue {
-            background-color: var(--secondary-blue) !important;
-        }
-        .bg-light-gold {
-            background-color: var(--light-gold) !important;
-        }
-        .text-blue {
-            color: var(--primary-blue) !important;
-        }
-        
-        /* Card hover effects */
-        .special-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            overflow: hidden;
-        }
-        .special-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
-        }
-        
-        /* Slanted image effect */
-        .clip-slant {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-        }
-        .clip-slant2 {
-            clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-        }
-        .clip-rect {
-            clip-path: none !important;
-            height: 250px !important;
-        }
-        
-        /* Background images for news section */
-        .special-image {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .special-image1 {
-            background-image: url('../images/e.avif');
-        }
-        .special-image2 {
-            background-image: url('../images/c.avif');
-        }
-        .special-image3 {
-            background-image: url('../images/d.avif');
-        }
-        .special-image4 {
-            background-image: url('../images/f.avif');
-        }
-        
-        /* Footer styling */
-        footer {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-        }
-        
-        /* Custom card for team members */
-        .custom-card {
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-        }
-        .custom-card:hover {
-            border-color: var(--accent-gold);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .clip-slant, .clip-slant2 {
-                clip-path: none;
-                height: 250px;
-            }
-            .carousel-caption .overlay {
-                width: 90% !important;
-            }
-        }
-        
-        /* Social icons positioning */
-        .social-icons {
-            z-index: 3;
-        }
+.min-vh-100 {
+    min-height: 100vh;
+}

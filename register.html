@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorah | Luxury Furniture Experience</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-7 col-lg-6">
+                <div class="text-center mb-5">
+                    <h1 class="eclipse-logo">Register</h1>
+                </div>
+                
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <form id="registerForm">
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="firstName" class="form-label fw-bold">First Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="bi bi-person text-primary"></i>
+                                        </span>
+                                        <input 
+                                            type="text" 
+                                            class="form-control border-start-0 ps-0" 
+                                            id="firstName" 
+                                            placeholder="Enter First Name"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label fw-bold">Last Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="bi bi-person text-primary"></i>
+                                        </span>
+                                        <input 
+                                            type="text" 
+                                            class="form-control border-start-0 ps-0" 
+                                            id="lastName" 
+                                            placeholder="Enter Last Name"
+                                            required
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="regEmail" class="form-label fw-bold">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-envelope text-primary"></i>
+                                    </span>
+                                    <input 
+                                        type="email" 
+                                        class="form-control border-start-0 ps-0" 
+                                        id="regEmail" 
+                                        placeholder="Enter Email"
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="regPassword" class="form-label fw-bold">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-lock text-primary"></i>
+                                    </span>
+                                    <input 
+                                        type="password" 
+                                        class="form-control border-start-0 ps-0" 
+                                        id="regPassword" 
+                                        placeholder="Enter Password"
+                                        required
+                                    >
+                                    <button class="btn btn-outline-secondary" type="button" id="toggleRegPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="form-text">يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل</div>
+                            </div>
+                            
+                            <div class="mb-5">
+                                <label for="confirmPassword" class="form-label fw-bold">Confirm Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="bi bi-lock-fill text-primary"></i>
+                                    </span>
+                                    <input 
+                                        type="password" 
+                                        class="form-control border-start-0 ps-0" 
+                                        id="confirmPassword" 
+                                        placeholder="Enter Password"
+                                        required
+                                    >
+                                    <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid mb-4">
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold">
+                                    <i class="bi bi-person-plus me-2"></i>Register
+                                </button>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="mb-0">Have an account?<a href="login.html" class="fw-bold text-primary text-decoration-none">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="registerAlert" class="alert alert-success mt-4 d-none" role="alert"></div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
